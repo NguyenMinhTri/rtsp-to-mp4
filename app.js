@@ -39,5 +39,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+var listener = app.listen(3600);
+console.log('Your friendly Express server, listening on port %s', listener.address().port);
 module.exports = app;
